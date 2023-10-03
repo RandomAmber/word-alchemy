@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import WordsArea from "./components/WordsArea"
+import WordHolder from "./components/WordHolder";
+import { Draggable, Droppable, DragDropContext } from "react-beautiful-dnd";
+
+const data = ["cat", "dog", "rat", "mouse", "blouse", "blood"]
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="heading">Word Alchemy</h1>
+      <div className="gameArea">
+        <div className="wordSum">
+          <WordHolder />
+          <p>+</p>
+          <WordHolder />
+          <p>=</p>
+          <WordHolder />
+        </div>
+        <WordsArea
+        words = {data.join(" ")} />
+
+      </div>
     </div>
   );
 }
