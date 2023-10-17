@@ -53,3 +53,11 @@ body {
 .heading {
     text-align: center;
 }
+
+.word-container {
+    text-align: center;
+    padding: 5px;
+    background-color: rgb(0, 247, 255);
+    cursor: pointer;
+  }
+  
